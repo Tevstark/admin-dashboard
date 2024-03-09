@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar content"  
+  ;
+}
+.sidebar,
+.header,
+.content {
+  border: 1px solid black;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  grid-row: span 6;
+  background-color: aqua;
+}
+
+.header {
+  grid-area: header;
+  grid-column: 2 /span 5;
+
+}
+
+.content {
+  grid-area: content;
+  grid-column: 2 / span 5;
+  grid-row: 2 / span 5;
+  background-color: rgb(234, 232, 232);
+}
